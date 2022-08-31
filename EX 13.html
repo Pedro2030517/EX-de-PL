@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <body>
+            <script>
+              function validar()  
+             {
+             
+                var v1, v2, v3, res;
+                v1 = parseInt(document.meuForm.va1.value);
+                v2 = parseInt(document.meuForm.vb2.value);
+                v3 = parseInt(document.meuForm.vc3.value);
+               
+
+             if ((v1 + v2 > v3) && (v1 + v3> v2) && (v2 + v3 > v1) && (v2 + v1 > v3)&& (v3 + v1 > v2)&& (v3 + v2 > v1))   
+             {
+                if(( v1 == v2) && (v2 == v3))
+                {
+                    document.getElementById("destino").innerHTML = "<b> É um triângulo Equilátero </b>";
+                    document.getElementById("imagem").innerHTML = "<img src='equilatero.png'>";
+            
+                }
+                else if ((v1!=v2) && (v2!=v3) && (v3!=v1))
+            {
+                document.getElementById("destino").innerHTML="Esse é um triângulo escaleno";
+                document.getElementById("imagem").innerHTML = "<img src='escaleno.png'>";
+            }
+        
+            else 
+            {
+                document.getElementById("destino").innerHTML="Esse é um triângulo isósceles";
+                document.getElementById("imagem").innerHTML = "<img src='isosceles.png'>";
+
+            }
+             }
+             
+            
+             else 
+            {
+                document.getElementById("destino").innerHTML="Não é um Triângulo";
+            
+            }
+             
+            }
+                
+            </script>
+
+
+                
+             
+            
+             
+             
+                
+             
+          
+             
+             <form name="meuForm">
+                Valor 1: <input type="text" name="va1" value="Digite o primeiro valor"><br>
+                Valor 2: <input type="text" name="vb2" value="Digite o segundo valor"><br>
+                Valor 3: <input type="text" name="vc3" value="Digite o terceiro valor"><br>
+                <input type="button" name="butenviar" value="Enviar" onclick="validar();">
+              </form>
+        
+             <p id="destino"></p>
+             <p id="imagem"></p>
+
+        </body>
+    </head>
+</html>

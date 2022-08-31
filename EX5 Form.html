@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script lang="javascript">
+        function calcular()
+        {
+            var pv, sv, tv, qv, m;
+            pv = parseInt(meuform.pvalor.value);
+            sv = parseInt(meuform.svalor.value);
+            tv = parseInt(meuform.tvalor.value);
+            qv = parseInt(meuform.qvalor.value);
+            m = (pv + sv + tv + qv) / 4
+            document.getElementById("destino").innerHTML = m;
+
+        }
+    </script>
+    <form name="meuform">
+        primeiro valor: <input type="text" name="pvalor" value="0"><br>
+        segundo valor: <input type="text" name="svalor" value="0"><br>
+        terceiro valor: <input type="text" name="tvalor" value="0"><br>
+        quarto valor: <input type="text" name="qvalor" value="0"><br>
+
+        <input type="button" name="butSomar" value="calcular" onclick="calcular();">
+        
+
+    </form>
+    <p id="destino"></p>
+</body>
+</html>
